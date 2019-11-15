@@ -1,0 +1,26 @@
+01 toggle BNS_MODEL shelf:
+    label: "toggle BNS_MODEL shelf"
+    annotation: "toggleDynamicShelf BNS_MODEL "
+    image:
+        name: "modeling_shelf.png"
+        location: "custom"
+    command: "import pipelineTools;reload(pipelineTools);pipelineTools.toggleDynamicShelf('BNS_MODEL')"
+    sourceType: "python"
+
+02 toggle BNS_ANIM shelf:
+    label: "toggle BNS_ANIM shelf"
+    annotation: "toggleDynamicShelf BNS_ANIM "
+    image:
+        name: "anim.png"
+        location: "custom"
+    command: "import pipelineTools;reload(pipelineTools);pipelineTools.toggleDynamicShelf('BNS_ANIM')"
+    sourceType: "python"
+
+03 toggle BNS_LIGHT shelf:
+    label: "toggle BNS_LIGHT shelf"
+    annotation: "toggleDynamicShelf BNS_LIGHT "
+    image:
+        name: "light.png"
+        location: "custom"
+    command: "import pipelineTools;reload(pipelineTools);pipelineTools.toggleDynamicShelf('BNS_LIGHT')"
+    sourceType: "python"

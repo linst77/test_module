@@ -1,0 +1,125 @@
+01 Reference Editor:
+    label: "Reference Editor"
+    annotation: "Reference Editor"
+    image:
+        name: "refEdFileList.png"
+        location: "maya"
+    command: "ReferenceEditor"
+    sourceType: "mel"
+02 Select Hierarchy:
+    label: "Select Hierarchy"
+    annotation: "Select Hierarchy"
+    image:
+        name: "selectByHierarchy.png"
+        location: "maya"
+    command: "SelectHierarchy"
+    sourceType: "mel"
+03 SelectAllPolygonGeometry:
+    label: "SelectAllPolygonGeometry"
+    annotation: "Select All Polygon Geometry"
+    image:
+        name: "polySelectEdgeBorder.png"
+        location: "maya"
+    command: "SelectAllPolygonGeometry"
+    sourceType: "mel"
+    separator: True
+04 VRayObjectProperties:
+    label: "VRayObjectProperties"
+    annotation: "Apply vray object properties node to selection"
+    image:
+        name: "shelf_VRayObjectProperties.png"
+        location: "custom"
+    imageOverlayLabel: "VRay"
+    command: "vray objectProperties add_single"
+    sourceType: "mel"
+    separator: True
+05 vrayShowVFB:
+    label: "vrayShowVFB"
+    annotation: "show vray framebuffer"
+    image:
+        name: "vrayShowVFB.png"
+        location: "custom"
+    command: "vrayShowVFB()"
+    sourceType: "mel"
+    separator: True
+06 fixRenderLayerOutAdjustmentErrors:
+    label: "fixRenderLayerOutAdjustmentErrors"
+    annotation: "fix Render Layer Out Adjustment Errors"
+    image:
+        name: "render_layeredTexture.png"
+        location: "maya"
+    command: "fixRenderLayerOutAdjustmentErrors"
+    sourceType: "mel"
+    separator: True
+07 ccRenameReplace:
+    label: "ccRenameReplace"
+    annotation: "Rename and Replace Dialog Tool"
+    image:
+        name: "ccRenameReplace.png"
+        location: "custom"
+    command: "import ccRenameReplace;reload(ccRenameReplace)"
+    sourceType: "python"
+    separator: True
+08 deadlineSubmit:
+    label: "deadlineSubmit"
+    annotation: "Submit to Deadline"
+    image:
+        name: "deadlineSubmit.png"
+        location: "custom"
+    command: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.deadlineSubmit()"
+    sourceType: "python"
+    separator: True
+09 EStA:
+    label: "EStA"
+    annotation: "Export Stuff to Alembic"
+    image:
+        name: "EStA.png"
+        location: "custom"
+    command: "EStA"
+    mip0:
+        label: "All Storybots"
+        command: "cacheAllStorybots"
+    mip1:
+        label: "shotCam"
+        command: "cacheShotCam"
+    mip2:
+        label: "Beep"
+        command: "cacheBeep"
+    mip3:
+        label: "Bing"
+        command: "cacheBing"
+    mip4:
+        label: "Bang"
+        command: "cacheBang"
+    mip5:
+        label: "Boop"
+        command: "cacheBoop"
+    mip6:
+        label: "Bo"
+        command: "cacheBo"
+    mip7:
+        label: "Calculator"
+        command: "cacheCalculator"
+    mip8:
+        label: "Binoculars"
+        command: "cacheBinoculars"
+    mip9:
+        label: "All Storybots then Camera (expirimental)"
+        command: "cacheBotsCamera"
+    sourceType: "mel"
+10 fixCache:
+    label: "fixCache"
+    annotation: "Fix broken cacher when Storybots have deformers on them"
+    image:
+        name: "fixCache.png"
+        location: "custom"
+    command: "fixCache"
+    sourceType: "mel"
+11 unlockNodes:
+    label: "unlockNodes"
+    annotation: "Unlock broken/locked geometry nodes"
+    image:
+        name: "unlockNodes.png"
+        location: "custom"
+    command: "import unlockNodes"
+    sourceType: "python"

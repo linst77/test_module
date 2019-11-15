@@ -1,0 +1,244 @@
+01 Reference Editor:
+    label: "Reference Editor"
+    annotation: "Reference Editor"
+    image:
+        name: "refEdFileList.png"
+        location: "maya"
+    command: "ReferenceEditor"
+    sourceType: "mel"
+02 Outliner Editor:
+    label: "Outliner Editor"
+    annotation: "Outliner Editor"
+    image:
+        name: "outliner.png"
+        location: "maya"
+    command: "OutlinerWindow"
+    sourceType: "mel"
+03 Hypershade Editor:
+    label: "Hypershade Editor"
+    annotation: "Hypershade Editor"
+    image:
+        name: "hypershadeIcon.png"
+        location: "maya"
+    command: "HypershadeWindow"
+    sourceType: "mel"
+04 SpreadSheetEditor:
+    label: "SpreadSheetEditor"
+    annotation: "Spreadsheet Edit the attributes of the selected object(s)"
+    image:
+        name: "menuIconWindow.png"
+        location: "maya"
+    imageOverlayLabel: "Sheet"
+    command: "SpreadSheetEditor"
+    sourceType: "mel"
+05 SetEditor:
+    label: "SetEditor"
+    annotation: "Edit set membership"
+    image:
+        name: "menuIconWindow.png"
+        location: "maya"
+    imageOverlayLabel: "Set"
+    command: "SetEditor"
+    sourceType: "mel"
+06 GraphEditor:
+    label: "GraphEditor"
+    annotation: "Edit animation curves"
+    image:
+        name: "animateSnapshot.png"
+        location: "maya"
+    imageOverlayLabel: "graph"
+    command: "GraphEditor"
+    sourceType: "mel"
+    separator: True
+07 Select Hierarchy:
+    label: "Select Hierarchy"
+    annotation: "Select Hierarchy"
+    image:
+        name: "selectByHierarchy.png"
+        location: "maya"
+    command: "SelectHierarchy"
+    sourceType: "mel"
+08 SelectAllPolygonGeometry:
+    label: "SelectAllPolygonGeometry"
+    annotation: "Select All Polygon Geometry"
+    image:
+        name: "polySelectEdgeBorder.png"
+        location: "maya"
+    command: "SelectAllPolygonGeometry"
+    sourceType: "mel"
+    separator: True
+09 buildEyeLights:
+    label: "buildEyeLights"
+    annotation: "buildEyeLights for main character"
+    image:
+        name: "buildEyeLights.png"
+        location: "custom"
+    command: "import lightingTools\nreload(lightingTools)\nlightingTools.buildEyeLights()"
+    sourceType: "python"
+10 autoCreateLightElem:
+    label: "autoCreateLightElem"
+    annotation: "create light elements for selectedl lights (select locators, not shapes)"
+    image:
+        name: "autoCreateLightElem.png"
+        location: "custom"
+    command: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.autoCreateLightElem()"
+    sourceType: "python"
+11 VRayLightRectShape:
+    label: "VRayLightRectShape"
+    annotation: "Create a V-Ray Rect Light"
+    image:
+        name: "shelf_LightRect.png"
+        location: "custom"
+    imageOverlayLabel: "VRay"
+    command: "select -r `shadingNode -asLight VRayLightRectShape`"
+    sourceType: "mel"
+12 VRayObjectProperties:
+    label: "VRayObjectProperties"
+    annotation: "Apply vray object properties node to selection"
+    image:
+        name: "shelf_VRayObjectProperties.png"
+        location: "custom"
+    imageOverlayLabel: "VRay"
+    command: "vray objectProperties add_single"
+    sourceType: "mel"
+    separator: True
+13 setTestResolutionVar 100:
+    label: "setTestResolutionVar 100"
+    annotation: "Set test resolution to 100% (1920x1080)"
+    image:
+        name: "menuIconRender.png"
+        location: "maya"
+    imageOverlayLabel: "r100"
+    command: "setTestResolutionVar(1)"
+    sourceType: "mel"
+14 setTestResolutionVar 50:
+    label: "setTestResolutionVar 50"
+    annotation: "Set test resolution to 50% (960x540)"
+    image:
+        name: "menuIconRender.png"
+        location: "maya"
+    imageOverlayLabel: "r050"
+    command: "setTestResolutionVar(4)"
+    sourceType: "mel"
+15 setTestResolutionVar 25:
+    label: "setTestResolutionVar 25"
+    annotation: "Set test resolution to 25% (480x270)"
+    image:
+        name: "menuIconRender.png"
+        location: "maya"
+    imageOverlayLabel: "r025"
+    command: "setTestResolutionVar(3)"
+    sourceType: "mel"
+16 vrayShowVFB:
+    label: "vrayShowVFB"
+    annotation: "show vray framebuffer"
+    image:
+        name: "vrayShowVFB.png"
+        location: "custom"
+    command: "vrayShowVFB()"
+    sourceType: "mel"
+    separator: True
+17 fixRenderLayerOutAdjustmentErrors:
+    label: "fixRenderLayerOutAdjustmentErrors"
+    annotation: "fix Render Layer Out Adjustment Errors"
+    image:
+        name: "render_layeredTexture.png"
+        location: "maya"
+    command: "fixRenderLayerOutAdjustmentErrors"
+    sourceType: "mel"
+    separator: True
+18 LightCentricLightLinkingEditor:
+    label: "LightCentricLightLinkingEditor"
+    annotation: "Light-Centric - Light Links"
+    image:
+        name: "menuIconWindow.png"
+        location: "maya"
+    imageOverlayLabel: "LC-LL"
+    command: "LightCentricLightLinkingEditor"
+    sourceType: "mel"
+19 ObjectCentricLightLinkingEditor:
+    label: "ObjectCentricLightLinkingEditor"
+    annotation: "Object Centric - Lightlinks"
+    image:
+        name: "menuIconWindow.png"
+        location: "maya"
+    imageOverlayLabel: "OC-LL"
+    command: "ObjectCentricLightLinkingEditor"
+    sourceType: "mel"
+    separator: True
+20 MakeLightLinks:
+    label: "MakeLightLinks"
+    annotation: "Make light links between selected lights and selected objects"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "MakeLL"
+    command: "MakeLightLinks"
+    sourceType: "mel"
+21 BreakLightLinks:
+    label: "BreakLightLinks"
+    annotation: "Break light links between selected lights and selected objects"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "BLL"
+    command: "BreakLightLinks"
+    sourceType: "mel"
+22 MakeShadowLinks:
+    label: "MakeShadowLinks"
+    annotation: "MakeShadowLinks"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "MSL"
+    command: "MakeShadowLinks"
+    sourceType: "mel"
+23 BreakShadowLinks:
+    label: "BreakShadowLinks"
+    annotation: "BreakShadowLinks"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "BSL"
+    command: "BreakShadowLinks"
+    sourceType: "mel"
+    separator: True
+24 selGEO:
+    label: "selGEO"
+    annotation: "selGEOShapes"
+    image:
+        name: "selGEO.png"
+        location: "custom"
+    command: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.selGEO()"
+    sourceType: "python"
+    doubleClickCommand: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.selGEO(shapes=False, transforms=True)"
+    mip0:
+        label: "Select GEO"
+        command: 'python("try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.selGEO(shapes=False, transforms=True)")'
+    separator: True
+25 ccRenameReplace:
+    label: "ccRenameReplace"
+    annotation: "Rename and Replace Dialog Tool"
+    image:
+        name: "ccRenameReplace.png"
+        location: "custom"
+    command: "import ccRenameReplace;reload(ccRenameReplace)"
+    sourceType: "python"
+26 createShotCam:
+    label: "createShotCam"
+    annotation: "create standardized shotCam for shot"
+    image:
+        name: "createShotCam.png"
+        location: "custom"
+    command: "import cameraTools;reload(cameraTools);cameraTools.createShotCam(camera_name='shotCam')"
+    sourceType: "python"
+27 deadlineSubmit:
+    label: "deadlineSubmit"
+    annotation: "Submit to Deadline"
+    image:
+        name: "deadlineSubmit.png"
+        location: "custom"
+    command: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.deadlineSubmit()"
+    sourceType: "python"
+
+

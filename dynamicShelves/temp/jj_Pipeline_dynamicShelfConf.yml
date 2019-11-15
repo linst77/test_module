@@ -1,0 +1,44 @@
+
+01 ReferenceEditor:
+    label: "ReferenceEditor"
+    annotation: "Edit the references for the current scene"
+    image:
+        name: "refEdFileList.png"
+        location: "maya"
+    command: "ReferenceEditor"
+    sourceType: "mel"
+02 Shotgun_init:
+    label: "SG_init"
+    annotation: "SG_init"
+    image:
+        name: "sg_init.png"
+        location: "custom"
+    command: "import sgtk\nsgtk.platform.restart()"
+    sourceType: "python"
+03 JJ_Reference:
+    label: "jj_reference"
+    annotation: "jj_reference"
+    image:
+        name: "jj_reference.png"
+        location: "custom"
+    command: "import jj_reference_v02\nreload( jj_reference_v02)\njj_reference_v02.show()"
+    sourceType: "python"
+
+04 JJ_Reference:
+    label: "PlayB"
+    annotation: "PlayB"
+    image:
+        name: "gio.png"
+        location: "custom"
+    command: "import jj_reviewer2\nreload( jj_reviewer2)\njj_reviewer2.show()"
+    sourceType: "python"
+
+
+05 JJ_Reviwer3:
+    label: "Review"
+    annotation: "Review"
+    image:
+        name: "publish.png"
+        location: "custom"
+    command: "import jj_reviewer3\nreload( jj_reviewer3)\njj_reviewer3.show()"
+    sourceType: "python"

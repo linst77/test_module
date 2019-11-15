@@ -1,0 +1,19 @@
+01 Rename:
+    label: "Rename"
+    annotation: "Edit the references for the current scene"
+    image:
+        name: "rename.png"
+        location: "custom"
+    imageOverlayLabel: "Rename"        
+    command: "source \"renameModel\";Quick_rename_tool();"
+    sourceType: "mel"
+
+02 UVTransfer:
+    label: "UVT"
+    annotation: "Edit the references for the current scene"
+    image:
+        name: "selVrayOsd.png"
+        location: "custom"
+    imageOverlayLabel: "UVTrans"        
+    command: "source \"uvtransfer\";aj_UVTransfer();"
+    sourceType: "mel"

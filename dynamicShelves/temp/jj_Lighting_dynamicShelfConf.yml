@@ -1,0 +1,305 @@
+01 Openfile:
+    label: "Open"
+    annotation: "Shotgun workfile open"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "Open"
+    command: "import jj_shotgun_open\nreload( jj_shotgun_open)\njj_shotgun_open.shotgunOpen()"
+    sourceType: "python"
+
+02 Savefile:
+    label: "Open"
+    annotation: "Shotgun workfile save"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "Save"
+    command: "import jj_shotgun_save\nreload( jj_shotgun_save)\njj_shotgun_save.shotgunSave()"
+    sourceType: "python"
+
+03 Loader:
+    label: "Loader"
+    annotation: "Load assets and cache from Shotgun"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_loader\nreload( jj_shotgun_loader)\njj_shotgun_loader.shotgunLoader()"
+    sourceType: "python"
+    imageOverlayLabel: "Loader"
+
+04 Breakdown:
+    label: "Breakdown"
+    annotation: "See assets and caches loaded from shotgun"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_break\nreload( jj_shotgun_break)\njj_shotgun_break.breakDown()"
+    sourceType: "python"
+    imageOverlayLabel: "Breakdown"
+
+05 Frameset:
+    label: "Frameset"
+    annotation: "Set frame range from Shotgun"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_frame\nreload( jj_shotgun_frame)\njj_shotgun_frame.frameSet()"
+    sourceType: "python"
+    imageOverlayLabel: "Frame"
+
+06 sgNetworkPublisher:
+    label: "sgNetworkPublisher"
+    annotation: "Publish"
+    image:
+        name: "publish_network.png"
+        location: "custom"
+    command: "import jj_shotgun_network_publisher\nreload( jj_shotgun_network_publisher)\njj_shotgun_network_publisher.shotgun_network_publish()"
+    sourceType: "python"
+    imageOverlayLabel: "N_Publish"
+
+07 NetworkPublisherMonitor:
+    label: "NetworkPublisherMonitor"
+    annotation: "Publish_monitor"
+    image:
+        name: "publish_monitor.png"
+        location: "custom"
+    command: "import jj_publish\nreload( jj_publish)\njj_publish.show()"
+    sourceType: "python"
+    imageOverlayLabel: "P_Monitor"
+
+08 finder:
+    label: ""
+    annotation: "Open this shot in finder"
+    image:
+        name: "finder.png"
+        location: "custom"
+    command: "import pymel.core as pm\nimport subprocess\nmaFile = '/'.join(pm.sceneName().split('/')[:-4])\nsubprocess.call([\"open\", \"-R\", maFile])"
+    sourceType: "python"
+    separator: True
+
+09 buildEyeLights:
+    label: "buildEyeLights"
+    annotation: "buildEyeLights for main character"
+    image:
+        name: "buildEyeLights.png"
+        location: "custom"
+    command: "import lightingTools\nreload(lightingTools)\nlightingTools.buildEyeLights()"
+    sourceType: "python"
+
+10 viewportLighting:
+    label: ""
+    annotation: "Create viewport lighting for the VrayRecLight"
+    image:
+        name: "viewport_lighting.png"
+        location: "custom"
+    command: "try:\n    reload(viewport_lighting)\nexcept:\n    import viewport_lighting"
+    sourceType: "python"
+
+11 autoCreateLightElem:
+    label: "autoCreateLightElem"
+    annotation: "create light elements for selectedl lights (select locators, not shapes)"
+    image:
+        name: "autoCreateLightElem.png"
+        location: "custom"
+    command: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.autoCreateLightElem()"
+    sourceType: "python"
+
+12 VRayLightRectShape:
+    label: "VRayLightRectShape"
+    annotation: "Create a V-Ray Rect Light"
+    image:
+        name: "shelf_LightRect.png"
+        location: "custom"
+    imageOverlayLabel: "VRay"
+    command: "select -r `shadingNode -asLight VRayLightRectShape`"
+    sourceType: "mel"
+
+13 vrayShowVFB:
+    label: "vrayShowVFB"
+    annotation: "show vray framebuffer"
+    image:
+        name: "vrayShowVFB.png"
+        location: "custom"
+    command: "vrayShowVFB()"
+    sourceType: "mel"
+    separator: True
+
+14 fixRenderLayerOutAdjustmentErrors:
+    label: "fixRenderLayerOutAdjustmentErrors"
+    annotation: "fix Render Layer Out Adjustment Errors"
+    image:
+        name: "render_layeredTexture.png"
+        location: "maya"
+    command: "fixRenderLayerOutAdjustmentErrors"
+    sourceType: "mel"
+
+15 SelectAllPolygonGeometry:
+    label: "SelectAllPolygonGeometry"
+    annotation: "Select All Polygon Geometry"
+    image:
+        name: "polySelectEdgeBorder.png"
+        location: "maya"
+    command: "SelectAllPolygonGeometry"
+    sourceType: "mel"
+
+16 Unlocker:
+    label: "Unlock"
+    annotation: "Unlock all locked nodes in scene"
+    image:
+        name: "unlockNodes.png"
+        location: "custom"
+    command: "lightingTools.geoUnlocker()"
+    imageOverlayLabel: "unlock"
+    sourceType: "python"
+    separator: True
+
+17 LightCentricLightLinkingEditor:
+    label: "LightCentricLightLinkingEditor"
+    annotation: "Light-Centric - Light Links"
+    image:
+        name: "menuIconWindow.png"
+        location: "maya"
+    imageOverlayLabel: "LC-LL"
+    command: "LightCentricLightLinkingEditor"
+    sourceType: "mel"
+
+18 ObjectCentricLightLinkingEditor:
+    label: "ObjectCentricLightLinkingEditor"
+    annotation: "Object Centric - Lightlinks"
+    image:
+        name: "menuIconWindow.png"
+        location: "maya"
+    imageOverlayLabel: "OC-LL"
+    command: "ObjectCentricLightLinkingEditor"
+    sourceType: "mel"
+    separator: True
+
+19 MakeLightLinks:
+    label: "MakeLightLinks"
+    annotation: "Make light links between selected lights and selected objects"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "MakeLL"
+    command: "MakeLightLinks"
+    sourceType: "mel"
+
+20 BreakLightLinks:
+    label: "BreakLightLinks"
+    annotation: "Break light links between selected lights and selected objects"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "BLL"
+    command: "BreakLightLinks"
+    sourceType: "mel"
+
+21 MakeShadowLinks:
+    label: "MakeShadowLinks"
+    annotation: "MakeShadowLinks"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "MSL"
+    command: "MakeShadowLinks"
+    sourceType: "mel"
+
+22 BreakShadowLinks:
+    label: "BreakShadowLinks"
+    annotation: "BreakShadowLinks"
+    image:
+        name: "menuIconShading.png"
+        location: "maya"
+    imageOverlayLabel: "BSL"
+    command: "BreakShadowLinks"
+    sourceType: "mel"
+    separator: True
+
+23 Transfer UVs:
+    label: "Transfer UVs"
+    annotation: "Transfer UVs from first selected mesh onto second selected mesh"
+    image:
+        name: "alignSurface.png"
+        location: "maya"
+    command: "import lightingTools\nreload(lightingTools)\nlightingTools.AutoTransferUV()"
+    imageOverlayLabel: "UV Xfer"
+    sourceType: "python"
+
+24 VrayOsd:
+    label: "VrayOsd"
+    annotation: "Add and remove Vray subdivs to selected geometry"
+    image:
+        name: "addVrayOsd.png"
+        location: "custom"
+    imageOverlayLabel: "Subdivs"
+    command: "source addSubdivs.mel;"
+    sourceType: "mel"
+
+25 Renamer:
+    label: "Renamer"
+    annotation: "Rename and Replace Dialog Tool"
+    image:
+        name: "ccRenameReplace.png"
+        location: "custom"
+    command: "source renameModel;Quick_rename_tool();"
+    imageOverlayLabel: "Rename"
+    sourceType: "mel"
+
+26 RenameShapes:
+    label: "Rename Shapes"
+    annotation: "Rename Shapes: Correct all shape node names in scene to object node name plus 'Shape'"
+    image:
+        name: "toonPerspBackground.png"
+        location: "custom"
+    command: "import correctShapeNodes"
+    imageOverlayLabel: "ShapesFix"
+    sourceType: "python"
+
+27 Organize Scene:
+    label: "Organize"
+    annotation: "Put scene elements in proper place, set up BG plate projection"
+    image:
+        name: "Organize.png"
+        location: "custom"
+    imageOverlayLabel: "Organize"
+    command: "OrganizeScene"
+    sourceType: "mel"
+
+28 DeleteAlembic:
+    label: "Delete Alembic"
+    annotation: "Deletes all AlembicNodes and shot_cam objects"
+    image:
+        name: "alignOnMid.png"
+        location: "maya"
+    command: "propagator"
+    imageOverlayLabel: "no .abc"
+    sourceType: "mel"
+
+29 JJ_Reference:
+    label: "jj_reference"
+    annotation: "jj_reference"
+    image:
+        name: "jj_reference.png"
+        location: "custom"
+    command: "import jj_reference_v02\nreload( jj_reference_v02)\njj_reference_v02.show()"
+    sourceType: "python"
+    separator: True
+
+30 fastVrayToggle:
+    label: "fast vray toggle"
+    annotation: "toggle vray settings: current and fast"
+    image:
+        name: "Fast_vray.png"
+        location: "custom"
+    command: "try:\n    reload(fast_vray)\nexcept:\n    import fast_vray\n\nfast_vray.settings_toggle()\nfast_vray.button_toggle()"
+    sourceType: "python"
+
+31 deadlineSubmit:
+    label: "deadlineSubmit"
+    annotation: "Submit to Deadline"
+    image:
+        name: "deadlineSubmit.png"
+        location: "custom"
+    command: "SubmitJobToDeadline"
+    sourceType: "mel"

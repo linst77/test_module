@@ -1,0 +1,115 @@
+
+01 Openfile:
+    label: "Open"
+    annotation: "Shotgun workfile open"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "Open"
+    command: "import jj_shotgun_open\nreload( jj_shotgun_open)\njj_shotgun_open.shotgunOpen()"
+    sourceType: "python"
+    separator: True
+
+01 Savefile:
+    label: "Open"
+    annotation: "Shotgun workfile save"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "Save"
+    command: "import jj_shotgun_save\nreload( jj_shotgun_save)\njj_shotgun_save.shotgunSave()"
+    sourceType: "python"
+    separator: True
+
+03 Loader:
+    label: "Loader"
+    annotation: "Shotgun loader"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_loader\nreload( jj_shotgun_loader)\njj_shotgun_loader.shotgunLoader()"
+    sourceType: "python"
+    imageOverlayLabel: "Loader"
+    separator: True
+
+04 Breakdown:
+    label: "Breakdown"
+    annotation: "Shotgun loader"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_break\nreload( jj_shotgun_break)\njj_shotgun_break.breakDown()"
+    sourceType: "python"
+    imageOverlayLabel: "Breakdown"
+    separator: True
+
+05 Frameset:
+    label: "Frameset"
+    annotation: "Shotgun loader"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_frame\nreload( jj_shotgun_frame)\njj_shotgun_frame.frameSet()"
+    sourceType: "python"
+    imageOverlayLabel: "Frame"
+    separator: True
+
+06 screeningRoom:
+    label: "Screen"
+    annotation: "Shotgun loader"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_screen\nreload( jj_shotgun_screen)\njj_shotgun_screen.screenRoom()"
+    sourceType: "python"
+    imageOverlayLabel: "Screen"
+    separator: True
+
+07 Publisher:
+    label: "Publisher"
+    annotation: "Shotgun Publisher"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_publisher\nreload( jj_shotgun_publisher)\njj_shotgun_publisher.shotgunPublish()"
+    sourceType: "python"
+    imageOverlayLabel: "Publisher"
+    separator: True
+
+08 Playblast:
+    label: "Playblast"
+    annotation: "Shotgun Playblast"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_reviewer\nreload( jj_reviewer)\njj_reviewer.show()"
+    sourceType: "python"
+    imageOverlayLabel: "Review"
+    separator: True
+
+09 shotgun_init:
+    label: "Shotgun init"
+    annotation: "Shotgun initialize"
+    image:
+        name: "shotgun_init.png"
+        location: "custom"
+    command: "import sgtk\nsgtk.platform.restart()"
+    sourceType: "python"
+    imageOverlayLabel: "Init"
+    separator: True
+#02 Shotgun_init:
+#    label: "SG_init"
+#    annotation: "SG_init"
+#    image:
+#        name: "sg_init.png"
+#        location: "custom"
+#    command: "import sgtk\nsgtk.platform.restart()"
+#    sourceType: "python"
+#03 JJ_Reference:
+#    label: "jj_reference"
+#    annotation: "jj_reference"
+#    image:
+#        name: "jj_reference.png"
+#        location: "custom"
+#    command: "import jj_reference_v02\nreload( jj_reference_v02)\njj_reference_v02.show()"
+#    sourceType: "python"

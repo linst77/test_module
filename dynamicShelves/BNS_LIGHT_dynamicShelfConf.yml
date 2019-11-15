@@ -1,0 +1,30 @@
+01 Deadline:
+    label: ""
+    annotation: "Deadline"
+    image:
+        name: "submit_render_sq.png"
+        location: "custom"
+    command: "SubmitJobToDeadline;"
+    sourceType: "mel"
+    separator: True
+
+02 AlembicBake:
+    label: ""
+    annotation: "AlembicBake"
+    image:
+        name: "alembic_sq.png"
+        location: "custom"
+    command: "import abcio\nabcio.show_controller()"
+    sourceType: "python"
+
+03 bns_shade:
+    label: ""
+    annotation: "bns_shade"
+    image:
+        name: "shader_set.png"
+        location: "custom"
+    command: "import bns_shade as bns_shade\nbns_shade.show_shadeset_ui()"
+    sourceType: "python"
+
+
+

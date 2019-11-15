@@ -1,0 +1,247 @@
+01 sgOpen:
+    label: "sgOpen"
+    annotation: "open a file through Shotgun"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "Open"
+    command: "import jj_shotgun_open\nreload( jj_shotgun_open)\njj_shotgun_open.shotgunOpen()"
+    sourceType: "python"
+
+02 sgSave:
+    label: "sgSave"
+    annotation: "save a file through Shotgun"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "Save"
+    command: "import jj_shotgun_save\nreload( jj_shotgun_save)\njj_shotgun_save.shotgunSave()"
+    sourceType: "python"
+
+03 sgSyncFrameRange:
+    label: "sgSyncFrameRange"
+    annotation: "sync the shot frame range with Shotgun"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "SyncFr"
+    command: "import jj_shotgun_frame\nreload( jj_shotgun_frame)\njj_shotgun_frame.frameSet()"
+    sourceType: "python"
+
+04 sgPlayblast:
+    label: "sgPlayblast"
+    annotation: "playblast!"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    imageOverlayLabel: "PBlast"
+    command: "import jj_reviewer\nreload( jj_reviewer)\njj_reviewer.show()"
+    sourceType: "python"
+
+05 sgPublisher:
+    label: "sgPublisher"
+    annotation: "Publish"
+    image:
+        name: "shotgun.png"
+        location: "custom"
+    command: "import jj_shotgun_publisher\nreload( jj_shotgun_publisher)\njj_shotgun_publisher.shotgunPublish()"
+    sourceType: "python"
+    imageOverlayLabel: "Publisher"
+    separator: True
+
+
+
+
+
+
+06 jjImportPlate:
+    label: "jjImportPlate"
+    annotation: "import plate file"
+    image:
+        name: "jjImportPlate_icon.png"
+        location: "custom"
+    imageOverlayLabel: "plate"
+    command: "jjImportPlate(1.2);"
+    sourceType: "mel"
+
+07 jjImportAudio:
+    label: "jjImportAudio"
+    annotation: "import audio file"
+    image:
+        name: "jjImportAudio_icon.png"
+        location: "custom"
+    imageOverlayLabel: "audio"
+    command: "jjImportAudio;"
+    sourceType: "mel"
+
+08 jjReference:
+    label: "jjReference"
+    annotation: "reference in characters and/or a shot_cam"
+    image:
+        name: "jjReference_icon.png"
+        location: "custom"
+    imageOverlayLabel: "REFS"
+    command: "import jj_reference_v02\nreload( jj_reference_v02)\njj_reference_v02.show()"
+    sourceType: "python"
+
+09 jjProxySwap:
+    label: "jjProxySwap"
+    annotation: "swap between proxy and full StoryBot rigs"
+    image:
+        name: "jjProxySwap_icon.png"
+        location: "custom"
+    command: "import jjProxySwap\nreload (jjProxySwap)\njjProxySwap.doIt()"
+    sourceType: "python"
+    separator: True
+
+
+
+
+
+
+10 beepSelectionSets:
+    label: "beepSelectionSets"
+    annotation: "LMB for all controls, RMB for more options"
+    image:
+        name: "beep_icon.png"
+        location: "custom"
+    imageOverlayLabel: "beep"
+    command: "source \"beepSelectionSets\"; beepSelectionSets_all;"
+    sourceType: "mel"
+#   mip0:
+#       label: "beep_all"
+#       command: "source \"beepSelectionSets\"; beepSelectionSets_all"
+#   mip1:
+#       label: "beep_arms"
+#       command: "source \"beepSelectionSets\"; beepSelectionSets_arms"
+#   mip2:
+#       label: "beep_mouth"
+#       command: "source \"beepSelectionSets\"; beepSelectionSets_mouth"
+
+
+11 bingSelectionSets:
+    label: "bingSelectionSets"
+    annotation: "LMB for all controls, RMB for more options"
+    image:
+        name: "bing_icon.png"
+        location: "custom"
+    imageOverlayLabel: "bing"
+    command: "source \"bingSelectionSets\"; bingSelectionSets_all;"
+    sourceType: "mel"
+#   mip0:
+#       label: "bing_all"
+#       command: "source \"bingSelectionSets\"; bingSelectionSets_all"
+#   mip1:
+#       label: "bing_arms"
+#       command: "source \"bingSelectionSets\"; bingSelectionSets_arms"
+#   mip2:
+#       label: "bing_mouth"
+#       command: "source \"bingSelectionSets\"; bingSelectionSets_mouth"
+
+12 bangSelectionSets:
+    label: "bangSelectionSets"
+    annotation: "LMB for all controls, RMB for more options"
+    image:
+        name: "bang_icon.png"
+        location: "custom"
+    imageOverlayLabel: "bang"
+    command: "source \"bangSelectionSets\"; bangSelectionSets_all;"
+    sourceType: "mel"
+#   mip0:
+#       label: "bang_all"
+#       command: "source \"bangSelectionSets\"; bangSelectionSets_all"
+#   mip1:
+#       label: "bang_arms"
+#       command: "source \"bangSelectionSets\"; bangSelectionSets_arms"
+#   mip2:
+#       label: "bang_mouth"
+#       command: "source \"beepSelectionSets\"; beepSelectionSets_mouth"
+
+
+13 boSelectionSets:
+    label: "boSelectionSets"
+    annotation: "LMB for all controls, RMB for more options"
+    image:
+        name: "bo_icon.png"
+        location: "custom"
+    imageOverlayLabel: "bo"
+    command: "source \"boSelectionSets\"; boSelectionSets_all;"
+    sourceType: "mel"
+#   mip0:
+#       label: "bo_all"
+#       command: "source \"boSelectionSets\"; boSelectionSets_all"
+#   mip1:
+#       label: "bo_arms"
+#       command: "source \"boSelectionSets\"; boSelectionSets_arms"
+#   mip2:
+#       label: "bo_mouth"
+#       command: "source \"boSelectionSets\"; boSelectionSets_mouth"
+
+14 boopSelectionSets:
+    label: "boopSelectionSets"
+    annotation: "LMB for all controls, RMB for more options"
+    image:
+        name: "boop_icon.png"
+        location: "custom"
+    imageOverlayLabel: "boop"
+    command: "source \"boopSelectionSets\"; boopSelectionSets_all;"
+    sourceType: "mel"
+#   mip0:
+#       label: "boop_all"
+#       command: "source \"boopSelectionSets\"; boopSelectionSets_all"
+#   mip1:
+#       label: "boop_arms"
+#       command: "source \"boopSelectionSets\"; boopSelectionSets_arms"
+#   mip2:
+#       label: "boop_mouth"
+#       command: "source \"boopSelectionSets\"; boopSelectionSets_mouth"
+
+15 selectAllBotCtrls:
+    label: "selectAllBotCtrls"
+    annotation: "selects every rig control on all five bots"
+    image:
+        name: "aselect.xpm"
+        location: "maya"
+    imageOverlayLabel: "all"
+    command: "selectAllBotCtrls;"
+    sourceType: "mel"
+    separator: True
+
+16 studioLibrary:
+    label: "studioLibrary"
+    annotation: "open studioLibrary"
+    image:
+        name: "studiolibrary_icon.png"
+        location: "custom"
+    command: "import studiolibrary\nreload (studiolibrary)\nstudiolibrary.main(name = \"StoryBots Anim Library\", path = \"/Volumes/public/StoryBots/production/series/ask_the_storybots/03_shared_assets/01_cg/05_maya_tools/studio_library\")"
+    sourceType: "python"
+
+17 tweenMachine:
+    label: "tweenMachine"
+    annotation: "open tweenMachine"
+    image:
+        name: "tweenMachine_icon.png"
+        location: "custom"
+    command: "import tweenMachine\ntweenMachine.start()"
+    sourceType: "python"
+
+18 pose2shelf:
+    label: "pose2shelf"
+    annotation: "open pose2shelf"
+    image:
+        name: "pose2shelf_icon.png"
+        location: "custom"
+    command: "pose2shelf;"
+    sourceType: "mel"
+    separator: True
+
+19 jjEyelidMatcher:
+    label: "jjEyelidMatcher"
+    annotation: "click to copy tops to bottoms, double-click to copy bottoms to tops"
+    image:
+        name: "jjEyelidMatcher_icon.png"
+        location: "custom"
+    command: "import jjEyelidMatcher\nreload (jjEyelidMatcher)\njjEyelidMatcher.topToBottom()"
+    doubleClickCommand: "import jjEyelidMatcher\nreload (jjEyelidMatcher)\njjEyelidMatcher.bottomToTop()"
+    sourceType: "python"
+

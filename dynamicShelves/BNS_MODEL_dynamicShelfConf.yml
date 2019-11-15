@@ -1,0 +1,26 @@
+01 VetexNormal:
+    label: ""
+    annotation: "VetexNormal"
+    image:
+        name: "toggle_vertex_color.png"
+        location: "custom"
+    command: "_val = cmds.polyOptions(q=True, gl=True, colorShadedDisplay=True)[0]\ncmds.polyOptions(gl=True, colorShadedDisplay=not _val)"
+    sourceType: "python"
+
+02 AlembicBake:
+    label: ""
+    annotation: "AlembicBake"
+    image:
+        name: "alembic_sq.png"
+        location: "custom"
+    command: "import abcio\nabcio.show_controller()"
+    sourceType: "python"
+
+03 bns_shade:
+    label: ""
+    annotation: "bns_shade"
+    image:
+        name: "shader_set.png"
+        location: "custom"
+    command: "import bns_shade as bns_shade\nbns_shade.show_shadeset_ui()"
+    sourceType: "python"

@@ -1,0 +1,47 @@
+01 File Path Editor:
+    label: "File Path Editor"
+    annotation: "File Path Editor"
+    image:
+        name: "editPCM.png"
+        location: "custom"
+    command: "FilePathEditor"
+    sourceType: "mel"
+02 Ingest:
+    label: "Ingest"
+    annotation: "Ingest mayaAscii file - removes all renderers except VRay"
+    image:
+        name: "ingest.png"
+        location: "custom"
+    command: "try: reload(ingest)\nexcept: import ingest\ningest.fileDialogRemoveRenderers()"
+    sourceType: "python"
+    separator: True
+03 selGEO:
+    label: "selGEO"
+    annotation: "Select all GEOShape nodes. If nothing selected, searches scene. If items selected, searches through those hierarchies."
+    image:
+        name: "selGEO.png"
+        location: "custom"
+    command: "try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.selGEO()"
+    sourceType: "python"
+    doubleClickCommand: '"try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.selGEO(shapes=0, transforms=1)"'
+    mip0:
+        label: "Select GEO"
+        command: 'python("try: reload(lightingTools)\nexcept: import lightingTools\nlightingTools.selGEO(shapes=0, transforms=1)")'
+    separator: True
+04 ccRenameReplace:
+    label: "ccRenameReplace"
+    annotation: "Rename and Replace Dialog Tool"
+    image:
+        name: "ccRenameReplace.png"
+        location: "custom"
+    command: "import ccRenameReplace;reload(ccRenameReplace)"
+    sourceType: "python"
+05 shotCam:
+    label: "shotCam"
+    annotation: "shotCam"
+    image:
+        name: "createShotCam.png"
+        location: "custom"
+    command: "import cameraTools;reload(cameraTools);cameraTools.createShotCam(camera_name='shotCam')"
+    sourceType: "python"
+

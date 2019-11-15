@@ -1,0 +1,8 @@
+
+environment:
+    ICONS_PATH: $MODULE/icons
+    DYNAMIC_SHELF_PATH : $MODULE/dynamicShelves
+    MAYA_PLUG_IN_PATH:
+        - $MODULE/plug-ins
+    PYTHONPATH:
+        - $MODULE/lib

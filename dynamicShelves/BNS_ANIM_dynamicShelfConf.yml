@@ -1,0 +1,53 @@
+01 MVP_Playblast:
+    label: "MVP-0.5.0"
+    annotation: "open a MVP-0.5.0"
+    image:
+        name: "playblast_sq.png"
+        location: "custom"
+    #imageOverlayLabel: "Open"
+    command: "import mvp.ui\nmvp.ui.show()"
+    sourceType: "python"
+    separator: True
+
+02 Synoptic:
+    label: "synoptic"
+    annotation: "show synoptic tool"
+    image:
+        name: "synoptic.png"
+        location: "custom"
+    #imageOverlayLabel: "Save"
+    command: "import mgear.synoptic\nsynoptic_tool = mgear.synoptic\nsynoptic_tool.open()"
+    sourceType: "python"
+
+03 StudioLibrary:
+    label: "StudioLibrary"
+    annotation: "StudioLibrary"
+    image:
+        name: "studiolibrary.png"
+        location: "custom"
+    #imageOverlayLabel: "Save"
+    command: "import studiolibrary\nstudiolibrary.main()"
+    sourceType: "python"
+    separator: True
+
+04 bs_controlsUI:
+    label: "bs_controlsUI"
+    annotation: "bs_controlsUI"
+    image:
+        name: "controller.png"
+        location: "custom"
+    #imageOverlayLabel: "Save"
+    command: "import bs_controlsUI\nfunc = bs_controlsUI.BSControlsUI()\nfunc.bsControlsUI()"
+    sourceType: "python"
+
+05 rivet:
+    label: "rivet"
+    annotation: "rivet"
+    image:
+        name: "rivet.png"
+        location: "custom"
+    #imageOverlayLabel: "Save"
+    command: "import rivet\nreload( rivet)\nrivet.create()"
+    sourceType: "python"
+
+

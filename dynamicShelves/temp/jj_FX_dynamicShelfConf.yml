@@ -1,0 +1,18 @@
+
+01 ReferenceEditor:
+    label: "Paritcle Ins"
+    annotation: "particle instance tool"
+    image:
+        name: "particle_fx.png"
+        location: "custom"
+    command: "import particleIns\nreload( particleIns)\nparticleIns.gui()"
+    sourceType: "python"
+
+02 Shotgun_init:
+    label: "Bake instance"
+    annotation: "Bake instance"
+    image:
+        name: "objects.png"
+        location: "custom"
+    command: "import instanceBaker\nreload(instanceBaker)\ninstanceBaker.gui()"
+    sourceType: "python"

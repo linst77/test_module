@@ -1,0 +1,17 @@
+01 toggle jj_Pipeline shelf:
+    label: "toggle jj_Pipeline shelf"
+    annotation: "toggleDynamicShelf jj_Pipeline "
+    image:
+        name: "modeling_shelf.png"
+        location: "custom"
+    command: "import pipelineTools;reload(pipelineTools);pipelineTools.toggleDynamicShelf('BNS_MODEL')"
+    sourceType: "python"
+
+02 toggle jj_Shotgun shelf:
+    label: "toggle Shotgun shelf"
+    annotation: "toggleDynamicShelf Shotgun "
+    image:
+        name: "anim.png"
+        location: "custom"
+    command: "import pipelineTools;reload(pipelineTools);pipelineTools.toggleDynamicShelf('BNS_ANIM')"
+    sourceType: "python"
